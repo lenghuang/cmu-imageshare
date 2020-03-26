@@ -3,11 +3,10 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "../App.css";
 import firebase from "../Firebase/firebase.js";
-import img1 from "../pics/tomCortina1.jpg";
-import img2 from "../pics/martial.png";
-import notFound from "../pics/404.png";
+import init from "../pics/default.png";
 
 const images = [
+  init,
   "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/images%2F73212175_1182813895246272_1156546173536829440_n.jpg?alt=media&token=4cb6aa34-3c68-4869-8d6c-52cba2a9b126",
   "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/images%2F29B72064-4FA9-4E10-8BA7-6C8D0512AD19.jpeg?alt=media&token=8d9d03b1-0718-4534-8571-9353e8be96cb"
 ];
@@ -60,10 +59,3 @@ function generateImages() {
 }
 
 export default generateImages;
-
-/*
-makeItem(img2, "Tom Cortina", "tomLover123");
-  makeItem(img3, "Po Shen Loh", "USA IMO");
-  makeItem(img4, "", "");
-  makeItem(img5, "Don't Eat Here", "CMU Senate");
-*/

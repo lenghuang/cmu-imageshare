@@ -1,6 +1,6 @@
 import React from "react";
 import SlideShow from "./Carousel/slides.js";
-import ImageUpload from "./ButtonForm/uploadTest.js";
+import ImageUpload from "./ButtonForm/uploadimage.js";
 import scsday from "./pics/s20_logo.png";
 import "./App.css";
 
@@ -12,7 +12,6 @@ function App() {
           SCS Image Share{" "}
           <img src={scsday} style={{ height: 15 + "vh" }} alt="" />
         </h1>
-        <p>They say picture is worth a thousand word... (don't spam pls)</p>
       </div>
       <SlideShow />
       <ImageUpload />

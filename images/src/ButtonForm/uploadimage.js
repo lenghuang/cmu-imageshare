@@ -83,10 +83,10 @@ class ImageUpload extends Component {
             onClose={() => this.setState({ showUploadError: false })}
             dismissible
           >
-            <p>
+            <div className="alertText">
               {" "}
               <b>NO IMAGE:</b> Select an image first to upload.
-            </p>
+            </div>
           </Alert>
         </div>
       );
@@ -98,11 +98,9 @@ class ImageUpload extends Component {
             onClose={() => this.setState({ showUploadSuccess: false })}
             dismissible
           >
-            <p>
-              {" "}
-              <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
-              show :-)
-            </p>
+            {" "}
+            <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
+            show :-)
           </Alert>
         </div>
       );
@@ -111,10 +109,12 @@ class ImageUpload extends Component {
         <div className="ButtonContainer">
           <div
             style={{
-              padding: "2vh",
+              paddingTop: "7vh",
+              paddingBottom: "2vh",
               left: "30%",
-              position: "relative",
-              width: "40%"
+              width: "40%",
+              fontSize: "min(2.75vw,1.8vh)",
+              position: "relative"
             }}
           >
             <Form onChange={event => this.handleChange(event)}>
@@ -123,7 +123,10 @@ class ImageUpload extends Component {
           </div>
           <div style={{ position: "relative" }}>
             <Button variant="secondary" onClick={this.handleUpload}>
-              Click Here To Upload!
+              <span style={{ fontSize: "min(2.75vw,1.8vh)" }}>
+                {" "}
+                Click Here To Upload{" "}
+              </span>
             </Button>
           </div>
         </div>

@@ -24,7 +24,7 @@ function SlideShow() {
         })}
         prevIcon={React.createElement("img", {
           src: left,
-          style: { height: "min(15vh,10vw)" }
+          style: { height: "min(12vh,10vw)" }
         })}
       >
         {generateImages()}
