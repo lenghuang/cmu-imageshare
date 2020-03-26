@@ -16,12 +16,9 @@ function App() {
       <SlideShow />
       <ImageUpload />
       <div className="footer">
-        <p>
-          {" "}
-          <a href="https://github.com/lenghuang/cmu-imageshare">
-            Made by Len Huang &copy; March 2020
-          </a>
-        </p>
+        <a href="https://github.com/lenghuang/cmu-imageshare">
+          Made by Len Huang &copy; March 2020
+        </a>
       </div>
     </div>
   );

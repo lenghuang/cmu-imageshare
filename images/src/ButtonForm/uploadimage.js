@@ -158,7 +158,7 @@ class ImageUpload extends Component {
             dismissible
           >
             {" "}
-            <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
+            <b>SUCCESSFUL UPLOAD: </b> Refresh to see your picture in the slide
             show :-)
           </Alert>
         </div>
@@ -196,35 +196,34 @@ class ImageUpload extends Component {
               <Row>
                 <Col>
                   <Form.Group
-                    onChange={e => this.handleCapChange(e)}
-                    controlId="formCaption"
-                  >
-                    <Form.Control placeholder="Enter Caption" />
-                  </Form.Group>
-                </Col>
-                <Col>
-                  <Form.Group
                     onChange={this.handlePplChange}
                     controlId="formPerson"
                   >
-                    <Form.Control placeholder="Enter Your Name / Alias" />
+                    <Form.Control placeholder="Name / Alias" />
                   </Form.Group>
+                </Col>
+                <Col>
+                  <Form onChange={event => this.handleFileChange(event)}>
+                    <Form.File label={this.state.fileText} lang="en" custom />
+                  </Form>
+                </Col>
+                <Col>
+                  <Button variant="danger" onClick={this.handleUpload} block>
+                    Click Here To Upload
+                  </Button>
                 </Col>
               </Row>
             </Form>
             <Row>
               <Col>
-                <Form onChange={event => this.handleFileChange(event)}>
-                  <Form.File label={this.state.fileText} lang="en" custom />
-                </Form>
-              </Col>
-              <Col>
-                <Button variant="secondary" onClick={this.handleUpload} block>
-                  <span style={{ fontSize: "min(2.75vw,1.8vh)" }}>
-                    {" "}
-                    Click Here To Upload{" "}
-                  </span>
-                </Button>
+                <span className="otherForm">
+                  <Form.Group
+                    onChange={e => this.handleCapChange(e)}
+                    controlId="formCaption"
+                  >
+                    <Form.Control placeholder={"Image Description"} />
+                  </Form.Group>
+                </span>
               </Col>
             </Row>
           </div>
