@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -13,14 +14,27 @@ class ImageUpload extends Component {
       /*  Initial State */
       image: null,
       fileText: "Find an image...",
+      inputCaption: "",
+      inputPerson: "",
       showUploadError: false,
-      showUploadSuccess: false
+      showUploadSuccess: false,
+      showInputError: false,
+      showServerError: false
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.handleFileChange = this.handleFileChange.bind(this);
+    this.handleCapChange = this.handleCapChange.bind(this);
+    this.handlePplChange = this.handlePplChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
 
-  handleChange(e) {
+  handleCapChange(e) {
+    this.setState({ inputCaption: e.target.value });
+  }
+  handlePplChange(e) {
+    this.setState({ inputPerson: e.target.value });
+  }
+
+  handleFileChange(e) {
     if (e.target.files[0]) {
       const image = e.target.files[0];
       this.setState(() => ({ image }));
@@ -30,15 +44,20 @@ class ImageUpload extends Component {
   handleUpload = () => {
     const { image } = this.state;
     if (image === null) {
-      console.log("Enter alert branch");
       this.setState({ showUploadError: true });
+    }
+    if (this.state.inputCaption === "" && this.state.inputPerson === "") {
+      this.setState({ showInputError: true });
     } else {
-      this.setState({ showUploadError: false });
       this.setState({ showUploadSuccess: true });
       const uploadTask = firebase
         .storage()
         .ref()
-        .child(`images/${image.name}`)
+        .child(
+          `images/${this.state.inputPerson.replace(/[^a-zA-Z ]/g, "") +
+            `_` +
+            this.state.inputCaption.replace(/[^a-zA-Z ]/g, "")}`
+        )
         .put(image);
       uploadTask.on(
         "state_changed",
@@ -48,21 +67,27 @@ class ImageUpload extends Component {
         error => {
           // error function ....
           console.log(error);
+          this.setState({ showServerError: true });
         },
         () => {
           // generate URL
           firebase
             .storage()
-            .ref(`images`)
-            .child(image.name)
+            .ref()
+            .child(
+              `images/${this.state.inputPerson.replace(/[^a-zA-Z ]/g, "") +
+                `_` +
+                this.state.inputCaption.replace(/[^a-zA-Z ]/g, "")}`
+            )
             .getDownloadURL()
             .then(url => {
               console.log(url);
+              console.log(this.state.inputCaption);
               // Store in database
               var data = {
                 imageURL: url,
-                caption: "Default Caption",
-                person: "John Doe"
+                caption: this.state.inputCaption,
+                person: this.state.inputPerson
               };
               firebase
                 .database()
@@ -75,7 +100,25 @@ class ImageUpload extends Component {
   };
 
   render() {
-    if (this.state.showUploadError) {
+    if (this.state.showUploadError && this.state.showInputError) {
+      return (
+        <div className="Alert">
+          <Alert
+            variant="warning"
+            onClose={() =>
+              this.setState({ showUploadError: false, showInputError: false })
+            }
+            dismissible
+          >
+            <div className="alertText">
+              {" "}
+              <b>NO INPUTS:</b> Please use these forms to input an image
+              caption, your name, and an image!
+            </div>
+          </Alert>
+        </div>
+      );
+    } else if (this.state.showUploadError) {
       return (
         <div className="Alert">
           <Alert
@@ -86,6 +129,22 @@ class ImageUpload extends Component {
             <div className="alertText">
               {" "}
               <b>NO IMAGE:</b> Select an image first to upload.
+            </div>
+          </Alert>
+        </div>
+      );
+    } else if (this.state.showServerError) {
+      return (
+        <div className="Alert">
+          <Alert
+            variant="warning"
+            onClose={() => this.setState({ showServerError: false })}
+            dismissible
+          >
+            <div className="alertText">
+              {" "}
+              <b>DID NOT UPLOAD:</b> Something went wrong with uploading the
+              image to the server. This will be fixed soon!
             </div>
           </Alert>
         </div>
@@ -104,6 +163,22 @@ class ImageUpload extends Component {
           </Alert>
         </div>
       );
+    } else if (this.state.showInputError) {
+      return (
+        <div className="Alert">
+          <Alert
+            variant="danger"
+            onClose={() => this.setState({ showInputError: false })}
+            dismissible
+          >
+            <div className="alertText">
+              {" "}
+              <b>NO TEXT:</b> Please input a description/caption for your image,
+              as well as your name/nickname.
+            </div>
+          </Alert>
+        </div>
+      );
     } else {
       return (
         <div className="ButtonContainer">
@@ -117,17 +192,41 @@ class ImageUpload extends Component {
               position: "relative"
             }}
           >
-            <Form onChange={event => this.handleChange(event)}>
-              <Form.File label={this.state.fileText} lang="en" custom />
+            <Form>
+              <Row>
+                <Col>
+                  <Form.Group
+                    onChange={e => this.handleCapChange(e)}
+                    controlId="formCaption"
+                  >
+                    <Form.Control placeholder="Enter Caption" />
+                  </Form.Group>
+                </Col>
+                <Col>
+                  <Form.Group
+                    onChange={this.handlePplChange}
+                    controlId="formPerson"
+                  >
+                    <Form.Control placeholder="Enter Your Name / Alias" />
+                  </Form.Group>
+                </Col>
+              </Row>
             </Form>
-          </div>
-          <div style={{ position: "relative" }}>
-            <Button variant="secondary" onClick={this.handleUpload}>
-              <span style={{ fontSize: "min(2.75vw,1.8vh)" }}>
-                {" "}
-                Click Here To Upload{" "}
-              </span>
-            </Button>
+            <Row>
+              <Col>
+                <Form onChange={event => this.handleFileChange(event)}>
+                  <Form.File label={this.state.fileText} lang="en" custom />
+                </Form>
+              </Col>
+              <Col>
+                <Button variant="secondary" onClick={this.handleUpload} block>
+                  <span style={{ fontSize: "min(2.75vw,1.8vh)" }}>
+                    {" "}
+                    Click Here To Upload{" "}
+                  </span>
+                </Button>
+              </Col>
+            </Row>
           </div>
         </div>
       );
