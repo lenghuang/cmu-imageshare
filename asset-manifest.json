@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/cmu-imageshare/static/css/main.5ccd235a.chunk.css",
-    "main.js": "/cmu-imageshare/static/js/main.198b8cf0.chunk.js",
-    "main.js.map": "/cmu-imageshare/static/js/main.198b8cf0.chunk.js.map",
+    "main.css": "/cmu-imageshare/static/css/main.887e9ec2.chunk.css",
+    "main.js": "/cmu-imageshare/static/js/main.633c31f7.chunk.js",
+    "main.js.map": "/cmu-imageshare/static/js/main.633c31f7.chunk.js.map",
     "runtime-main.js": "/cmu-imageshare/static/js/runtime-main.73402bac.js",
     "runtime-main.js.map": "/cmu-imageshare/static/js/runtime-main.73402bac.js.map",
-    "static/css/2.81e2c8a5.chunk.css": "/cmu-imageshare/static/css/2.81e2c8a5.chunk.css",
-    "static/js/2.9c5048a6.chunk.js": "/cmu-imageshare/static/js/2.9c5048a6.chunk.js",
-    "static/js/2.9c5048a6.chunk.js.map": "/cmu-imageshare/static/js/2.9c5048a6.chunk.js.map",
+    "static/css/2.994048a5.chunk.css": "/cmu-imageshare/static/css/2.994048a5.chunk.css",
+    "static/js/2.5bf7fcdb.chunk.js": "/cmu-imageshare/static/js/2.5bf7fcdb.chunk.js",
+    "static/js/2.5bf7fcdb.chunk.js.map": "/cmu-imageshare/static/js/2.5bf7fcdb.chunk.js.map",
     "index.html": "/cmu-imageshare/index.html",
-    "precache-manifest.913dd55412ae98c518af7a744596e7fc.js": "/cmu-imageshare/precache-manifest.913dd55412ae98c518af7a744596e7fc.js",
+    "precache-manifest.86ba08fc1aaca474d9eefdcecd263a67.js": "/cmu-imageshare/precache-manifest.86ba08fc1aaca474d9eefdcecd263a67.js",
     "service-worker.js": "/cmu-imageshare/service-worker.js",
-    "static/css/2.81e2c8a5.chunk.css.map": "/cmu-imageshare/static/css/2.81e2c8a5.chunk.css.map",
-    "static/css/main.5ccd235a.chunk.css.map": "/cmu-imageshare/static/css/main.5ccd235a.chunk.css.map",
-    "static/js/2.9c5048a6.chunk.js.LICENSE.txt": "/cmu-imageshare/static/js/2.9c5048a6.chunk.js.LICENSE.txt",
-    "static/media/leftarrow.png": "/cmu-imageshare/static/media/leftarrow.c40e72ca.png",
-    "static/media/rightarrow.png": "/cmu-imageshare/static/media/rightarrow.9fd9462d.png",
+    "static/css/2.994048a5.chunk.css.map": "/cmu-imageshare/static/css/2.994048a5.chunk.css.map",
+    "static/css/main.887e9ec2.chunk.css.map": "/cmu-imageshare/static/css/main.887e9ec2.chunk.css.map",
+    "static/js/2.5bf7fcdb.chunk.js.LICENSE.txt": "/cmu-imageshare/static/js/2.5bf7fcdb.chunk.js.LICENSE.txt",
     "static/media/s20_logo.png": "/cmu-imageshare/static/media/s20_logo.8861a56c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.73402bac.js",
-    "static/css/2.81e2c8a5.chunk.css",
-    "static/js/2.9c5048a6.chunk.js",
-    "static/css/main.5ccd235a.chunk.css",
-    "static/js/main.198b8cf0.chunk.js"
+    "static/css/2.994048a5.chunk.css",
+    "static/js/2.5bf7fcdb.chunk.js",
+    "static/css/main.887e9ec2.chunk.css",
+    "static/js/main.633c31f7.chunk.js"
   ]
 }
