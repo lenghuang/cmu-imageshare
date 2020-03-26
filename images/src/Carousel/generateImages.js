@@ -14,6 +14,12 @@ const urlCheck = [
 const images = [
   {
     url:
+      "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/default%2Fdefault.png?alt=media&token=a6fba805-0145-44df-ad06-c011f1eaec04",
+    caption: "",
+    person: ""
+  },
+  {
+    url:
       "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/images%2F73212175_1182813895246272_1156546173536829440_n.jpg?alt=media&token=4cb6aa34-3c68-4869-8d6c-52cba2a9b126",
     caption: "Halloween",
     person: "Gary Aldrich"
