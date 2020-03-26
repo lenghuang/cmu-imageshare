@@ -18,7 +18,7 @@ function App() {
       <div className="footer">
         <p>
           {" "}
-          <a href="https://github.com/lenghuang/image2023">
+          <a href="https://github.com/lenghuang/cmu-imageshare">
             Made by Len Huang &copy; March 2020
           </a>
         </p>
