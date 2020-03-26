@@ -1,4 +1,4 @@
 # cmu-imageshare
 An image sharing platform for CMU
 
-lenghuang.github.io/cmu-imageshare
+(https://lenghuang.github.io/cmu-imageshare)
