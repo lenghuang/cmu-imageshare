@@ -5,10 +5,7 @@ import firebase from "../Firebase/firebase.js";
 // init from "../pics/default.png";
 //(init, "", ""),
 
-const urlCheck = [
-  "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/images%2F73212175_1182813895246272_1156546173536829440_n.jpg?alt=media&token=4cb6aa34-3c68-4869-8d6c-52cba2a9b126",
-  "https://firebasestorage.googleapis.com/v0/b/sushi-7c58c.appspot.com/o/images%2F29B72064-4FA9-4E10-8BA7-6C8D0512AD19.jpeg?alt=media&token=8d9d03b1-0718-4534-8571-9353e8be96cb"
-];
+const urlCheck = [];
 const images = [
   {
     original:
@@ -27,7 +24,9 @@ function ImageExists(url) {
 
 function safeSplice(entry) {
   var img = entry.original;
-  if (!urlCheck.includes(img) && ImageExists(img)) {
+  console.log(!urlCheck.includes(img));
+  console.log(ImageExists(img));
+  if (!urlCheck.includes(img)) {
     urlCheck.push(img);
     images.splice(1, 0, entry);
     console.log("PUSHED:");
