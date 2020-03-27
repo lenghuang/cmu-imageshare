@@ -13,6 +13,7 @@ function SlideShow() {
         showPlayButton={true}
         autoPlay={false}
         infinite={true}
+        slideInterval={5000}
       />
     </div>
   );

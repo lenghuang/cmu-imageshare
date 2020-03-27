@@ -3,7 +3,8 @@ import { Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import firebase from "../Firebase/firebase.js";
+import firebase from "../API/firebase.js";
+//import clarify from "./sfw.js";
 //import FileAlert from "./alerts.js";
 import "../App.css";
 
@@ -49,7 +50,6 @@ class ImageUpload extends Component {
     if (this.state.inputCaption === "" && this.state.inputPerson === "") {
       this.setState({ showInputError: true });
     } else {
-      this.setState({ showUploadSuccess: true });
       const uploadTask = firebase
         .storage()
         .ref()
@@ -81,8 +81,8 @@ class ImageUpload extends Component {
             )
             .getDownloadURL()
             .then(url => {
-              console.log(url);
-              console.log(this.state.inputCaption);
+              // CHECK SFW
+              // console.log(clarify(url));
               // Store in database
               var data = {
                 imageURL: url,
@@ -93,6 +93,7 @@ class ImageUpload extends Component {
                 .database()
                 .ref(`images`)
                 .push(data);
+              this.setState({ showUploadSuccess: true });
             });
         }
       );
@@ -158,7 +159,7 @@ class ImageUpload extends Component {
             dismissible
           >
             {" "}
-            <b>SUCCESSFUL UPLOAD: </b> Refresh to see your picture in the slide
+            <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
             show :-)
           </Alert>
         </div>
