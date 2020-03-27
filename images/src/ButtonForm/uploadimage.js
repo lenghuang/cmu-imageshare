@@ -47,7 +47,7 @@ class ImageUpload extends Component {
     if (image === null) {
       this.setState({ showUploadError: true });
     }
-    if (this.state.inputCaption === "" && this.state.inputPerson === "") {
+    if (this.state.inputPerson === "") {
       this.setState({ showInputError: true });
     } else {
       const uploadTask = firebase
@@ -162,8 +162,8 @@ class ImageUpload extends Component {
           >
             <div className="alertText">
               {" "}
-              <b>NO TEXT:</b> Please input a description/caption for your image,
-              as well as your name/nickname.
+              <b>GUESS WHO:</b> Please put a name / nickname so we know how cool
+              you are!
             </div>
           </Alert>
         </div>
