@@ -45,15 +45,17 @@ a {
 .image-gallery-description {
   background: rgba(255, 255, 255, 0.5);
   font-size: max(1.25vw, 2vh);
-  bottom: 10vh;
-  left: 50%;
   color: white;
-  line-height: 1;
-  padding: 2vh;
-  position: relative;
-  display: table;
+  position: absolute;
+  overflow: auto;
+  right: 0;
+  left: 0;
+  width: auto;
   margin: 0 auto;
+  width: 20vw;
+  max-height: 15vh;
 }
+
 .image-gallery-thumbnail-image {
   height: max(5vw, 10vh);
   width: max(15vw, 15vh);
@@ -66,7 +68,7 @@ a {
   font-size: max(1.1vw, 1.2vh);
   left: 0;
   text-shadow: 0px 0px 0 black;
-  overflow-wrap: break-word;
+  overflow: hidden;
 }
 .image-gallery-thumbnails {
   padding-top: 7vh;

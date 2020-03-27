@@ -14,7 +14,7 @@ class ImageUpload extends Component {
     this.state = {
       /*  Initial State */
       image: null,
-      fileText: "Find an image...",
+      fileText: "no file",
       inputCaption: "",
       inputPerson: "",
       showUploadError: false,
@@ -202,7 +202,7 @@ class ImageUpload extends Component {
                     onChange={this.handlePplChange}
                     controlId="formPerson"
                   >
-                    <Form.Control placeholder="Name / Alias" />
+                    <Form.Control type="text" placeholder="Name / Alias" />
                   </Form.Group>
                 </Col>
                 <Col>
@@ -224,7 +224,10 @@ class ImageUpload extends Component {
                     onChange={e => this.handleCapChange(e)}
                     controlId="formCaption"
                   >
-                    <Form.Control placeholder={"Image Description"} />
+                    <Form.Control
+                      type="text"
+                      placeholder={"Image Description"}
+                    />
                   </Form.Group>
                 </span>
               </Col>
