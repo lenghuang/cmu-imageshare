@@ -70,30 +70,32 @@ class ImageUpload extends Component {
           this.setState({ showServerError: true });
         },
         () => {
-          // generate URL
-          firebase
+          const storageRef = firebase
             .storage()
             .ref()
             .child(
               `images/${this.state.inputPerson.replace(/[^a-zA-Z ]/g, "") +
                 `_` +
                 this.state.inputCaption.replace(/[^a-zA-Z ]/g, "")}`
-            )
-            .getDownloadURL()
-            .then(url => {
-              // CHECK SFW
-              // console.log(clarify(url));
-              // Store in database
-              var data = {
-                imageURL: url,
-                caption: this.state.inputCaption,
-                person: this.state.inputPerson
-              };
-              firebase
-                .database()
-                .ref(`images`)
-                .push(data);
-            });
+            );
+          // generate URL
+          storageRef.getDownloadURL().then(url => {
+            // CHECK SFW
+            // console.log(clarify(url));
+            // Get metadata
+            var dateObject = new Date();
+            var dateString = dateObject.toDateString().substring(4);
+            var data = {
+              imageURL: url,
+              caption: this.state.inputCaption,
+              person: this.state.inputPerson,
+              date: dateString
+            };
+            firebase
+              .database()
+              .ref(`images`)
+              .push(data);
+          });
         }
       );
       if (!this.state.showServerError) {

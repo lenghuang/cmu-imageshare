@@ -3,16 +3,18 @@
 h1 {
   font-size: max(5vw, 6.75vh);
   font-weight: bolder;
-  color: black;
+  color: rgb(36, 0, 0);
   letter-spacing: 0.275vw;
-  text-shadow: 2px 2px 2px #52241f;
+  text-shadow: 0.2vh 0.2vh 0.3vh #70423c;
 }
 h3 {
   font-size: max(2vw, 2.5vh);
 }
 .header {
   position: relative;
-  padding: 3vh;
+  padding-top: 3vh;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   left: 0;
   top: 10%;
   width: 100%;
@@ -31,8 +33,18 @@ h3 {
   left: 0;
   width: 100%;
 }
-a {
+.intro {
+  position: relative;
+  font-size: max(1.12vw, 1.9vh);
+  padding-bottom: 4vh;
   color: rgb(255, 109, 109);
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 40vw;
+}
+a {
+  color: rgb(175, 6, 6);
 }
 .image-gallery-image {
   image-orientation: from-image;
@@ -44,21 +56,25 @@ a {
 
 .image-gallery-description {
   background: rgba(255, 255, 255, 0.5);
-  font-size: max(1.25vw, 2vh);
+  font-size: min(1.25vw, 2vh);
   color: white;
   position: absolute;
   overflow: auto;
   right: 0;
   left: 0;
+  bottom: 0px;
   width: auto;
   margin: 0 auto;
-  width: 20vw;
+  width: 30vw;
   max-height: 15vh;
 }
-
+.image-gallery-slide.image-gallery-description {
+  bottom: 0px;
+}
 .image-gallery-thumbnail-image {
-  height: max(5vw, 10vh);
-  width: max(15vw, 15vh);
+  max-height: 8vh;
+  max-width: 10vh;
+  overflow: hidden;
 }
 .image-gallery-thumbnail-label {
   box-sizing: border-box;
@@ -79,7 +95,7 @@ a {
   position: absolute;
 }
 .alertText {
-  font-size: "min(2.75vw,1.8vh)";
+  font-size: max(1.12vw, 1.9vh);
 }
 .Alert {
   width: 40%;
@@ -109,6 +125,5 @@ a {
 }
 .custom-file-label {
   font-size: max(1.12vw, 1.9vh);
-
   overflow: hidden;
 }

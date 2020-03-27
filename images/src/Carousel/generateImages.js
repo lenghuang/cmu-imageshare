@@ -45,7 +45,7 @@ function gotData(data) {
     var entry = {
       original: dict.imageURL,
       thumbnail: dict.imageURL,
-      description: dict.caption,
+      description: dict.caption + " [" + dict.date + "]",
       thumbnailLabel: dict.person,
       originalClass: "customimage"
     };

@@ -9,13 +9,37 @@ function App() {
     <div className="main">
       <div className="header">
         <h1>
-          SCS Image Share{" "}
+          CMU Image Share{" "}
           <img src={scsday} style={{ height: 15 + "vh" }} alt="" />
         </h1>
+        <div className="intro">
+          {" "}
+          A platform to see and share the daily happenings of fellow{" "}
+          <a href="https://www.youtube.com/watch?v=nyHnU123Iew">
+            Carnegie Mellon Students
+          </a>
+          . Hit arrows on the sides to scroll through images and the bottom
+          right to autoplay! Upload your pictures below!
+        </div>
       </div>
       <SlideShow />
       <ImageUpload />
       <div className="footer">
+        <div
+          style={{
+            margin: "0 auto",
+            width: "40vw",
+            color: "rgb(255, 109, 109)",
+            position: "relative",
+            paddingBottom: "4vh"
+          }}
+        >
+          {" "}
+          <b>DISCLAIMER: </b> Uploaded pictures are publicly visible. By
+          uploading, you agree that you have permission to redistribute this
+          photo from any involved party, including but not limited to: photo
+          creator, people in the photo, people associated with the photo, etc.
+        </div>
         <a href="https://github.com/lenghuang/cmu-imageshare">
           Made by Len Huang &copy; March 2020
         </a>
