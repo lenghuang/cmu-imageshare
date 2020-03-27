@@ -210,11 +210,6 @@ class ImageUpload extends Component {
                     <Form.File label={this.state.fileText} lang="en" custom />
                   </Form>
                 </Col>
-                <Col>
-                  <Button variant="danger" onClick={this.handleUpload} block>
-                    Click Here To Upload
-                  </Button>
-                </Col>
               </Row>
             </Form>
             <Row>
@@ -226,10 +221,15 @@ class ImageUpload extends Component {
                   >
                     <Form.Control
                       type="text"
-                      placeholder={"Image Description (Optional)"}
+                      placeholder={"Description (Optional)"}
                     />
                   </Form.Group>
                 </span>
+              </Col>
+              <Col>
+                <Button variant="danger" onClick={this.handleUpload} block>
+                  Upload
+                </Button>
               </Col>
             </Row>
           </div>

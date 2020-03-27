@@ -89,6 +89,26 @@ a {
   padding-top: 7vh;
   padding-bottom: 0.75vh;
 }
-.otherForm {
-  font-size: min(1.2vw, 2vh);
+.btn {
+  font-size: max(1.12vw, 1.9vh);
+  height: min(7.98vw, 4.8vh);
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+}
+.form-control {
+  font-size: max(1.12vw, 1.9vh);
+  height: min(8vw, 5vh);
+  position: relative;
+}
+.custom-file {
+  font-size: max(1.12vw, 1.9vh);
+  height: min(8vw, 5vh);
+  overflow: hidden;
+  position: relative;
+}
+.custom-file-label {
+  font-size: max(1.12vw, 1.9vh);
+
+  overflow: hidden;
 }
