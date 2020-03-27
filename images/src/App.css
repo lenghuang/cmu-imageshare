@@ -45,7 +45,6 @@ a {
 .image-gallery-description {
   background: rgba(255, 255, 255, 0.5);
   font-size: max(1.25vw, 2vh);
-  font-family: "Courier New", Courier, monospace;
   bottom: 10vh;
   left: 50%;
   color: white;
@@ -62,10 +61,9 @@ a {
 .image-gallery-thumbnail-label {
   box-sizing: border-box;
   left: 50%;
-  font-family: "Courier New", Courier, monospace;
   background: rgba(22, 21, 21, 0.5);
   color: white;
-  font-size: max(1.2vw, 2vh);
+  font-size: max(1.1vw, 1.2vh);
   left: 0;
   text-shadow: 0px 0px 0 black;
   overflow-wrap: break-word;

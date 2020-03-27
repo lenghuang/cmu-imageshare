@@ -93,10 +93,12 @@ class ImageUpload extends Component {
                 .database()
                 .ref(`images`)
                 .push(data);
-              this.setState({ showUploadSuccess: true });
             });
         }
       );
+      if (!this.state.showServerError) {
+        this.setState({ showUploadSuccess: true });
+      }
     }
   };
 
@@ -150,20 +152,6 @@ class ImageUpload extends Component {
           </Alert>
         </div>
       );
-    } else if (this.state.showUploadSuccess) {
-      return (
-        <div className="Alert">
-          <Alert
-            variant="success"
-            onClose={() => this.setState({ showUploadSuccess: false })}
-            dismissible
-          >
-            {" "}
-            <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
-            show :-)
-          </Alert>
-        </div>
-      );
     } else if (this.state.showInputError) {
       return (
         <div className="Alert">
@@ -177,6 +165,20 @@ class ImageUpload extends Component {
               <b>NO TEXT:</b> Please input a description/caption for your image,
               as well as your name/nickname.
             </div>
+          </Alert>
+        </div>
+      );
+    } else if (this.state.showUploadSuccess) {
+      return (
+        <div className="Alert">
+          <Alert
+            variant="success"
+            onClose={() => this.setState({ showUploadSuccess: false })}
+            dismissible
+          >
+            {" "}
+            <b>SUCCESSFUL UPLOAD: </b> Scroll to see your picture in the slide
+            show :-)
           </Alert>
         </div>
       );
