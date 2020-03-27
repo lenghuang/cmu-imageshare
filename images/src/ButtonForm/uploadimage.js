@@ -14,7 +14,7 @@ class ImageUpload extends Component {
     this.state = {
       /*  Initial State */
       image: null,
-      fileText: "no file",
+      fileText: "",
       inputCaption: "",
       inputPerson: "",
       showUploadError: false,
@@ -202,7 +202,7 @@ class ImageUpload extends Component {
                     onChange={this.handlePplChange}
                     controlId="formPerson"
                   >
-                    <Form.Control type="text" placeholder="Name / Alias" />
+                    <Form.Control type="text" placeholder="Name" />
                   </Form.Group>
                 </Col>
                 <Col>
@@ -226,7 +226,7 @@ class ImageUpload extends Component {
                   >
                     <Form.Control
                       type="text"
-                      placeholder={"Image Description"}
+                      placeholder={"Image Description (Optional)"}
                     />
                   </Form.Group>
                 </span>
