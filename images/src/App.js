@@ -25,15 +25,7 @@ function App() {
       <SlideShow />
       <ImageUpload />
       <div className="footer">
-        <div
-          style={{
-            margin: "0 auto",
-            width: "40vw",
-            color: "rgb(255, 109, 109)",
-            position: "relative",
-            paddingBottom: "4vh"
-          }}
-        >
+        <div className="intro">
           {" "}
           <b>DISCLAIMER: </b> Uploaded pictures are publicly visible. By
           uploading, you agree that you have permission to redistribute this

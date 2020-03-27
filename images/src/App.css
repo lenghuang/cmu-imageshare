@@ -30,8 +30,8 @@ h3 {
   font-size: max(1.12vw, 1.9vh);
   padding: 3vh;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 60vw;
+  margin: 0 auto;
 }
 .intro {
   position: relative;
@@ -41,7 +41,7 @@ h3 {
   bottom: 0;
   left: 0;
   margin: 0 auto;
-  width: 40vw;
+  width: 60vw;
 }
 a {
   color: rgb(175, 6, 6);
