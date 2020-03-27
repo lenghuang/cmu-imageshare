@@ -24,14 +24,14 @@ function App() {
       </div>
       <SlideShow />
       <ImageUpload />
+      <div className="disclaim">
+        {" "}
+        <b>DISCLAIMER: </b> Uploaded pictures are publicly visible. By
+        uploading, you agree that you have permission to redistribute this photo
+        from any involved party, including but not limited to: photo creator,
+        people in the photo, people associated with the photo, etc.
+      </div>
       <div className="footer">
-        <div className="intro">
-          {" "}
-          <b>DISCLAIMER: </b> Uploaded pictures are publicly visible. By
-          uploading, you agree that you have permission to redistribute this
-          photo from any involved party, including but not limited to: photo
-          creator, people in the photo, people associated with the photo, etc.
-        </div>
         <a href="https://github.com/lenghuang/cmu-imageshare">
           Made by Len Huang &copy; March 2020
         </a>

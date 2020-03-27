@@ -33,13 +33,21 @@ h3 {
   width: 60vw;
   margin: 0 auto;
 }
+.disclaim {
+  position: relative;
+  font-size: max(1.12vw, 1.9vh);
+  padding: 3vh;
+  bottom: 0;
+  margin: 0 auto;
+  color: rgb(255, 109, 109);
+  width: 50vw;
+}
 .intro {
   position: relative;
   font-size: max(1.12vw, 1.9vh);
   padding-bottom: 4vh;
   color: rgb(255, 109, 109);
   bottom: 0;
-  left: 0;
   margin: 0 auto;
   width: 60vw;
 }
