@@ -20,13 +20,13 @@ To implement the back end of this web app, I am using Google Firebase to:
 ## Demo
 
 ##### Viewing Images
-<img src="ScrollFinal.gif" height="200"/>
+<img src="media/ScrollFinal.gif" height="200"/>
 
 ##### Uploading Images
-<img src="Upload.gif" height="200"/>
+<img src="media/Upload.gif" height="200"/>
 
 ##### Error Handling
-<img src="Errors_1.gif" height="200"/>
+<img src="media/Errors_1.gif" height="200"/>
 
 ##### Cross-device Compatability Across Devices
-<img src="crossdevice.gif" />
+<img src="media/crossdevice.gif" />
