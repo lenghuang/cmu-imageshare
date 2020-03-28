@@ -67,6 +67,7 @@ class ImageUpload extends Component {
         error => {
           // error function ....
           console.log(error);
+          this.setState({ showUploadSuccess: false });
           this.setState({ showServerError: true });
         },
         () => {
@@ -95,12 +96,10 @@ class ImageUpload extends Component {
               .database()
               .ref(`images`)
               .push(data);
+            this.setState({ showUploadSuccess: !this.state.showUploadError });
           });
         }
       );
-      if (!this.state.showServerError) {
-        this.setState({ showUploadSuccess: true });
-      }
     }
   };
 
@@ -143,7 +142,12 @@ class ImageUpload extends Component {
         <div className="Alert">
           <Alert
             variant="warning"
-            onClose={() => this.setState({ showServerError: false })}
+            onClose={() =>
+              this.setState({
+                showUploadSuccess: false,
+                showServerError: false
+              })
+            }
             dismissible
           >
             <div className="alertText">
