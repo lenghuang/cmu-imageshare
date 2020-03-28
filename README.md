@@ -24,6 +24,7 @@ To implement the back end of this web app, I am using Google Firebase to:
 
 ##### Uploading Images
 <img src="media/Upload.gif" height="225"/>
+
 ##### Error Handling
 <img src="media/Errors_1.gif" height="225"/>
 
