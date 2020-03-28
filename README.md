@@ -19,20 +19,26 @@ To implement the back end of this web app, I am using Google Firebase to:
 
 ## Demo
 
-##### Viewing Images
+#### Viewing Images
 <img src="media/ScrollFinal.gif" height="225"/>
 
-##### Uploading Images
+#### Uploading Images
 <img src="media/Upload.gif" height="225"/>
 
-##### Error Handling
+#### Error Handling
 <img src="media/Errors_1.gif" height="225"/>
 
-##### Compatibility Across Devices
+#### Compatibility Across Devices
 <img src="media/crossdevice.gif" />
 
 ## Reflections
 I completed this project in around 48 hours in order to deploy it as soon as my advisor sent out an email about this image sharing idea. Her email was asking for what platform would be ideal for image sharing _(ie Facebook, Email, flickr, etc)_. Having heard this, I jumped at the idea of creating a platform that could be used by my classmates. This was a great way to teach myself popular technologies like the ReactJS framework and Google's firebase. Furthermore, I found myself thoroughly enjoying the process of making a webapp with a practical goal: _**unite our college community in a time of isolation.**_ 
+
+While I am happy with how this turned out, some things I could have done better include:
+- Improve scalability of the website (ie aesthetic appearances on mobile devices)
+- Utilize direct access to Firebase storage via path/reference instead of the generated URL 
+- Create random and unique keys for the filenames of storage to prevent overwriting image data
+- Fix iOS bug where .heic files cannot be read and images are displayed rotated on desktop, but correctly on mobile
 
 In the (hopefully near) future, I want to add:
 - Content filtering for SFW photos [via API calls to Clarifai](https://www.clarifai.com/models/nsfw-image-recognition-model-e9576d86d2004ed1a38ba0cf39ecb4b1)
