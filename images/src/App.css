@@ -80,7 +80,7 @@ a {
   bottom: 0px;
 }
 .image-gallery-icon {
-  color: #b30000;
+  color: rgba(153, 31, 0, 0.65);
 }
 .image-gallery-thumbnail-image {
   max-height: 8vh;
