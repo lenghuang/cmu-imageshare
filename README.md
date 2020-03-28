@@ -30,3 +30,12 @@ To implement the back end of this web app, I am using Google Firebase to:
 
 ##### Cross-device Compatability Across Devices
 <img src="media/crossdevice.gif" />
+
+## Reflections
+I completed this project in around 48 hours in order to deploy it as soon as my advisor sent out an email about this image sharing idea. Her email was asking for what platform would be ideal for image sharing _(ie Facebook, Email, flickr, etc)_. Having heard this, I jumped at the idea of creating a platform that could be used by my classmates. This was a great way to teach myself popular technologies like the ReactJS framework and Google's firebase. Furthermore, I found myself thoroughly enjoying the process of making a webapp with a practical goal: _**unite our college community in a time of isolation.**_ 
+
+In the (hopefully near) future, I want to add:
+- Content filtering for SFW photos [via API calls to Clarifai](https://www.clarifai.com/models/nsfw-image-recognition-model-e9576d86d2004ed1a38ba0cf39ecb4b1)
+- User authentication so that write access is limited to Carnegie Mellon related domains (Firebase/OAuth)
+- Cloud functions to automatically clean storage by deleting files by age (Firebase)
+- onClick handler to toggle presence of description boxes (CSS/sCSS)
