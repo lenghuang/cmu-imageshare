@@ -7,10 +7,15 @@ Starting off as an idea from _CMU SCS First Year Advisor **Veronica Peet**_ (yay
 ## The How
 
 #### Front End
-ReactJS
+These are some of the tools I used to assist me with creating the front end for this website:
+- [Create React App](https://github.com/facebook/create-react-app)
+- [React Boostrap](https://github.com/react-bootstrap/react-bootstrap)
+- [React Image Gallery](https://github.com/xiaolin/react-image-gallery)
 
 #### Back End
-Firebase
+To implement the back end of this web app, I am using Google Firebase to:
+- Store photos onto a storge bucket (Storage)
+- Host image text data (Realtime Database)
 
 ## Demo
 
@@ -24,4 +29,4 @@ Firebase
 <img src="Errors_1.gif" height="200"/>
 
 ##### Cross-device Compatability Across Devices
-(gif of uploading and viewing from my computer to my phone)
+<img src="crossdevice.gif" />
