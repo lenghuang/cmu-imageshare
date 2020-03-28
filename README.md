@@ -15,14 +15,13 @@ Firebase
 ## Demo
 
 ##### Viewing Images
-![](ScrollFinal.gif)
-<img src="ScrollFinal.gif" height="40"/>
+<img src="ScrollFinal.gif" height="200"/>
 
 ##### Uploading Images
-![](Upload.gif | width=50)
+<img src="Upload.gif" height="200"/>
 
 ##### Error Handling
-![](Errors_1.gif | width=400)
+<img src="Errors_1.gif" height="200"/>
 
 ##### Cross-device Compatability Across Devices
 (gif of uploading and viewing from my computer to my phone)
