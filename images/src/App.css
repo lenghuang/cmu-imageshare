@@ -79,6 +79,9 @@ a {
 .image-gallery-slide.image-gallery-description {
   bottom: 0px;
 }
+.image-gallery-icon {
+  color: #b30000;
+}
 .image-gallery-thumbnail-image {
   max-height: 8vh;
   max-width: 10vh;
