@@ -7,13 +7,13 @@ Starting off as an idea from _CMU SCS First Year Advisor **Veronica Peet**_ (yay
 ## Demo
 
 #### Viewing Images
-![](Scroll.gif)
+![](ScrollFinal.gif | width=200)
 
 #### Uploading Images
-![](Upload.gif)
+![](Upload.gif | width=100)
 
 #### Error Handling
-![](Errors_1.gif)
+![](Errors_1.gif | width=400)
 
 #### Cross-device Compatability Across Devices
 (gif of uploading and viewing from my computer to my phone)
