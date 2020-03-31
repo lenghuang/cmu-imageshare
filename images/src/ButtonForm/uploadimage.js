@@ -152,8 +152,8 @@ class ImageUpload extends Component {
           >
             <div className="alertText">
               {" "}
-              <b>DID NOT UPLOAD:</b> Something went wrong with uploading the
-              image to the server. This will be fixed soon!
+              <b>DID NOT UPLOAD:</b> Please upload a valid image that's less
+              than 5MB!
             </div>
           </Alert>
         </div>
