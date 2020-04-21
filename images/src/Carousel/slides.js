@@ -14,6 +14,7 @@ function SlideShow() {
         autoPlay={false}
         infinite={true}
         slideInterval={5000}
+        lazyLoad={true}
       />
     </div>
   );
